@@ -15,6 +15,12 @@
 4. 在`router/index.js`中做参数接受，挂在`require.context`的第三个参数上。
 5. 根据正则实现按需加载路由文件，借此进行按需打包
 
+##### 实践
+1. demo里有A和B两个文件，其中一个有50M+的gif图片
+2. 执行yarn build --FileName=A 进行打包,查看包大小，只打包了A模块
+3. 执行yarn build --FileName=B 进行打包,查看包大小，只打包了B模块
+4. 执行yarn serve --FileName=B 同理，只有B模块的路由生效
+
 ## Project setup
 ```
 yarn install
